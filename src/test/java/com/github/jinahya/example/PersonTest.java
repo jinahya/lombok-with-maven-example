@@ -15,8 +15,6 @@
  */
 package com.github.jinahya.example;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNull;
 import org.testng.annotations.Test;
 
 /**
@@ -28,13 +26,12 @@ public class PersonTest {
     @Test
     public void getName() {
         final Person person = new Person();
-        assertNull(person.getName());
+        final String name = person.getName();
     }
 
     @Test
     public void setName() {
         final Person person = new Person();
         person.setName("");
-        assertEquals(person.getName(), "");
     }
 }

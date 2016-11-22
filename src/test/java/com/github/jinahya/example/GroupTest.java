@@ -15,6 +15,7 @@
  */
 package com.github.jinahya.example;
 
+import java.util.List;
 import static org.testng.Assert.assertNotNull;
 import org.testng.annotations.Test;
 
@@ -27,6 +28,7 @@ public class GroupTest {
     @Test
     public void getPeople() {
         final Group group = new Group();
-        assertNotNull(group.getPeople());
+        final List<Person> people = group.getPeople();
+        assertNotNull(people);
     }
 }
